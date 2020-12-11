@@ -10,6 +10,7 @@
     >
       <v-list-item
         @click="doneTask(task.id)"
+        :class="{ 'blue lighten-5' : task.done}"
       >
         <template v-slot:default>
           <v-list-item-action>
@@ -20,7 +21,11 @@
           </v-list-item-action>
 
           <v-list-item-content>
-            <v-list-item-title>{{task.title}}</v-list-item-title>
+            <v-list-item-title
+              :class="{'text-decoration-line-through': task.done}"
+            >
+              {{task.title}}
+            </v-list-item-title>
           </v-list-item-content>
         </template>
       </v-list-item>
