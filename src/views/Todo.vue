@@ -3,10 +3,11 @@
     <v-list
       flat
     >
-      <v-list-item
-        v-for="task in tasks"
-        :key="task.id"
-      >
+    <div
+      v-for="task in tasks"
+      :key="task.id"
+    >
+      <v-list-item>
         <template v-slot:default="{ active, }">
           <v-list-item-action>
             <v-checkbox
@@ -20,6 +21,8 @@
           </v-list-item-content>
         </template>
       </v-list-item>
+      <v-divider></v-divider>
+    </div>
     </v-list>
   </div>
 </template>
