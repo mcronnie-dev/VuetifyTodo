@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <v-list
+      class="pt-0"
       flat
     >
     <div
