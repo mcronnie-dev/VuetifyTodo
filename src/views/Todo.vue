@@ -8,11 +8,13 @@
       v-for="task in tasks"
       :key="task.id"
     >
-      <v-list-item>
-        <template v-slot:default="{ active, }">
+      <v-list-item
+        @click="doneTask(task.id)"
+      >
+        <template v-slot:default>
           <v-list-item-action>
             <v-checkbox
-              :input-value="active"
+              :input-value="task.done"
               color="primary"
             ></v-checkbox>
           </v-list-item-action>
@@ -36,17 +38,25 @@ export default {
       tasks: [
         {
           id: 1,
-          title: 'Wake up'
+          title: 'Wake up',
+          done: false
         },
         {
           id: 2,
-          title: 'Get bananas'
+          title: 'Get bananas',
+          done: true
         },
         {
-          id: 1,
-          title: 'Eat bananas'
+          id: 3,
+          title: 'Eat bananas',
+          done: false
         }
       ]
+    }
+  },
+  methods:{
+    doneTask(id) {
+      console.log('id: ', id)
     }
   }
 }
