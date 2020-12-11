@@ -56,7 +56,8 @@ export default {
   },
   methods:{
     doneTask(id) {
-      console.log('id: ', id)
+      let task = this.tasks.filter(task => task.id === id)[0]
+      task.done = !task.done
     }
   }
 }
