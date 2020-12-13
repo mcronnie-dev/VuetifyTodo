@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/36cd11df-4f3f-4aba-9de2-e412468bdab6/deploy-status)](https://app.netlify.com/sites/mcronnie-vuetify/deploys)
 # vuetify-todo
 
 ## Project setup
